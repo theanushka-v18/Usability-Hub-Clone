@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mediaQueries.css">
     <title>Usability Hub Clone</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 1.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -34,6 +35,7 @@
                     <li><a href="#" class="hover-link primary-btn">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link"  id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -143,7 +145,7 @@
     
     
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container id">
             <div class="feature-desc flex">
                 <h4>Optimisation for</h4>
                 <h3>Marketers</h3>
@@ -262,5 +264,14 @@
     <!-- sub footer section end -->
 
     <script src="https://kit.fontawesome.com/045b64dbec.js" crossorigin="anonymous"></script>
+
+    <script>
+        const togglebtn = document.getElementById("nav-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        togglebtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
